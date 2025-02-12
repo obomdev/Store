@@ -1,0 +1,12 @@
+dotnet new sln --name Store
+dotnet new mvc -o Store
+dotnet sln add Store\Store.csproj
+
+dotnet add package Microsoft.EntityFrameworkCore --version 9.0.2
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 9.0.2
+dotnet add package Microsoft.EntityFrameworkCore.Tools --version 9.0.2
+dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 9.0.2
+dotnet add package MySql.EntityFrameworkCore --version 9.0.0
+
+Criar as classes da camada de dados(Models)
+
