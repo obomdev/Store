@@ -8,5 +8,14 @@ dotnet add package Microsoft.EntityFrameworkCore.Tools --version 9.0.2
 dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 9.0.2
 dotnet add package MySql.EntityFrameworkCore --version 9.0.0
 
-Criar as classes da camada de dados(Models)
+
+
+Passos do Projeto:
+1.Criar as classes da camada de dados(Models)
+2.Criar classe de contexto
+3.Configurar a ConnectionString em appsettings.json
+4.Configure os serviços de Context e Identity no Program.cs
+5.Executar o Xampp: MySql
+6.Entrar no diretório do Projeto
+7.Executar "dotnet watch run"
 
