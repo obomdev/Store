@@ -40,6 +40,7 @@ public class HomeController : Controller
        };
        produtoVM.Produtos = _db.Produtos
             .Where(p => p.CategoriaId == produto.CategoriaId)
+            .Include(p => p.Fotos)
             .Take(4).ToList();
 
         return View(produtoVM);

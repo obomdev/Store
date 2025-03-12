@@ -21,3 +21,12 @@ Passos do Projeto:
 6.Entrar no diretório do Projeto
 7.Executar "dotnet watch run"
 
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design --version 9.0.0
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 9.0.2
+(packages necessarios para rodar o dotnet codegenerator. Obs: as version são relativas ao projeto em geral)
+
+
+dotnet codegenerator (Cria código baseado no já existente)
+dotnet aspnet-codegenerator
+dotnet aspnet-codegenerator controller -name CategoriasController --model Categoria --dataContext AppDbContext --layout "~/Views/Shared/_LayoutAdmin.cshtml" -outDir Controllers
+dotnet aspnet-codegenerator controller -name ProdutosController --model Produto --dataContext AppDbContext --layout "~/Views/Shared/_LayoutAdmin.cshtml" -outDir Controllers
