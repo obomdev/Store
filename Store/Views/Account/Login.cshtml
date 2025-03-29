@@ -34,12 +34,28 @@
                             <a class="small" href="password.html">Esqueceu sua Senha?</a>
                         </div>
                     </form>
-
                 </div>
-
+                <div class="card-footer text-center py-3">
+                    <div class="small">Novo por aqui? <a href="register.html">Cria sua conta!</a></div>
+                </div>
             </div>
-
         </div>
-
     </div>
 </div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial.cshtml"></partial>
+    <script type="text/javascript">
+        let mensagemErro = '';
+        $(".validation-sumary-errors ul li").each(function(){
+            mensagemErro += $(this).text() + '<br />';
+        });
+        if (mensagemErro != '')
+            swal.fire(
+                'Acesso Negado',
+                mensagemErro,
+                'error'
+            );
+    </script>
+}
+
