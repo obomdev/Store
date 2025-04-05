@@ -27,7 +27,7 @@ public class AccountController : Controller
         _userManager = userManager;
         _host = host;
     }
-
+    
     [HttpGet]
     public IActionResult Login(string returnUrl)
     {
@@ -85,6 +85,13 @@ public class AccountController : Controller
         _logger.LogInformation($"Usuário {ClaimTypes.Email} fez logoff");
         await _signInManager.SignOutAsync();
         return RedirectToAction("Index", "Home");
+    }
+
+    [HttpGet]
+    public IActionResult Registro()
+    {
+        RegistroVM register = new();
+        return View(register);
     }
 
       public bool IsValidEmail(string email)
