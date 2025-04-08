@@ -34,6 +34,9 @@ public class AccountController : Controller
         _db = db;
     }
     
+
+
+
     [HttpGet]
     public IActionResult Login(string returnUrl)
     {
@@ -43,8 +46,6 @@ public class AccountController : Controller
         };
         return View(login);
     } 
-
-  
 
     [HttpPost]
     [ValidateAntiForgeryToken]
@@ -93,6 +94,9 @@ public class AccountController : Controller
         return RedirectToAction("Index", "Home");
     }
 
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+
     [HttpGet]
     public IActionResult Registro()
     {
@@ -112,5 +116,7 @@ public class AccountController : Controller
             return false;
         }
     }
+
+
 
 }
