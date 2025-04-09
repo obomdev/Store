@@ -15,6 +15,7 @@
                 <div class="card-body">
                     <form asp-action="Login" method="post">
                         <div asp-validation-summary="ModelOnly" hidden></div>
+                        <input type="hidden" asp-for="UrlRetorno">
                         <div class="form-floating mb-3">
                             <input class="form-control" asp-for="Email" />
                             <label asp-for="Email"></label>
@@ -36,7 +37,7 @@
                     </form>
                 </div>
                 <div class="card-footer text-center py-3">
-                    <div class="small">Novo por aqui? <a href="register.html">Cria sua conta!</a></div>
+                    <div class="small">Novo por aqui? <a asp-action="Registro">Cria sua conta!</a></div>
                 </div>
             </div>
         </div>
